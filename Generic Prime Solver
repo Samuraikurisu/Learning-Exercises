@@ -1,0 +1,46 @@
+/*Coded in C#
+This program is a generic Prime Solver. I decided to test the pseudo code/other code I had written for a technical
+training interview exercise. Obviously this is simple and not useful over the long run.*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static int x = 5; //In a production program, this would be the user input. For a quick test of logic, I decided to manually manipulate the code myself. 
+        static int showCalc;
+        static int showCalc2;
+        static int count;
+        static void Main(string[] args)
+        {
+            for (count = 2; count <= (x-1); count++) //many different ways to calculate a prime number, this one seems pretty good to me. In a production
+                                                     //program, I'd probably have a larger value for count as it would be limited to integer maximum size.
+            {
+                
+                showCalc = (x % count);
+                showCalc2 = (x / 2);
+
+                if ((x % count) == 0) 
+                {
+                    Console.WriteLine(x + "is not prime");
+                    break;
+                }
+                Console.WriteLine(showCalc.ToString());
+                Console.WriteLine(showCalc2.ToString());
+            }
+            if ((x == count) && (x != 1)) 
+            {
+                Console.WriteLine(x + "is prime");
+            }
+            else
+            {
+                Console.WriteLine("Something went wrong....try again"); //In a production program, this would be probably in a catch statement with a custom exception.
+            }
+            return;
+        }
+    }
+}
