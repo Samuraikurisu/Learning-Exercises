@@ -29,7 +29,7 @@ namespace ConsoleApplication1
                     Console.WriteLine(x + "is not prime");
                     break;
                 }
-                Console.WriteLine(showCalc.ToString());
+                Console.WriteLine(showCalc.ToString()); //These two writeline statements would be removed if a 'full' program was required. This is one of my favorite methods of testing individual parts when traditional unit testing just isn't needed.
                 Console.WriteLine(showCalc2.ToString());
             }
             if ((x == count) && (x != 1)) 
